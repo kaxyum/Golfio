@@ -67,3 +67,13 @@ class Engine {
 }
 
 export default Engine;
+
+module.exports = {
+  addText: addText,
+  removeText: removeText,
+  addSprite: addSprite,
+  removeSprite: removeSprite,
+  update: update,
+  render: render,
+  start: start
+}
