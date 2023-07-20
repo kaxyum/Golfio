@@ -1,6 +1,11 @@
 # Golfio
 Simple GameEngine written in NodeJS by KaxYum
 
+# Install Golfio
+```
+npm i golfio
+```
+
 # Start the engine
 ```js
 const golfio = require("golfio");
