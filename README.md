@@ -29,7 +29,7 @@ golfio.addText(left, top, fontfamily, fontsize, text);
 golfio.removeText(text);
 ```
 
-# Create a simple canva and load a file.js
+# Create a simple canvas and load a file.js
 ```html
 <!DOCTYPE html>
 <html>
@@ -50,7 +50,7 @@ golfio.removeText(text);
 </html>
 ```
 
-# Add a fontfamily for the texts
+# Add a font-family for the texts
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
