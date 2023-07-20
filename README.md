@@ -8,14 +8,18 @@ npm i golfio
 
 # Start the engine
 ```js
-const golfio = require("golfio");
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
 
 golfio.start();
 ```
 
 # Add and Remove a Sprite
 ```js
-const golfio = require("golfio");
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
 
 golfio.addSprite(sprite);
 golfio.removeSprite(sprite);
@@ -23,7 +27,9 @@ golfio.removeSprite(sprite);
 
 # Add and Remove a Text
 ```js
-const golfio = require("golfio");
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
 
 golfio.addText(left, top, fontfamily, fontsize, text);
 golfio.removeText(text);
@@ -43,8 +49,8 @@ golfio.removeText(text);
 </head>
 
 <body>
-  <canvas id="game" width="300" height="300"></canvas>
-  <script type="module" src="file.js"></script>
+  <canvas id="game" width="930" height="930"></canvas>
+  <script type="module" src="/file.js"></script>
 </body>
 
 </html>

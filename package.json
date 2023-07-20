@@ -1,8 +1,7 @@
 {
-  "type": "module",
   "name": "golfio",
-  "version": "1.0.0",
-  "main": "engine.js",
+  "version": "1.0.50",
+  "main": "golfio.js",
   "description": "Simple GameEngine written in NodeJS by KaxYum",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
