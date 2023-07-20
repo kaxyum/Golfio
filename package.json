@@ -1,6 +1,20 @@
 {
-    "type": "module",
-    "name": "Golfio",
-    "version": "1.0.0",
-    "main": "engine.js"
+  "type": "module",
+  "name": "golfio",
+  "version": "1.0.0",
+  "main": "engine.js",
+  "description": "Simple GameEngine written in NodeJS by KaxYum",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaxyum/Golfio.git"
+  },
+  "author": "kaxyum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaxyum/Golfio/issues"
+  },
+  "homepage": "https://github.com/kaxyum/Golfio#readme"
 }
