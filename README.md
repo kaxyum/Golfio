@@ -35,6 +35,29 @@ golfio.addText(left, top, fontfamily, fontsize, text);
 golfio.removeText(text);
 ```
 
+# Generate a Numbers or a Letters
+```js
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
+
+golfio.generateNumber(number);
+golfio.generateLetter(letter);
+```
+
+# Execute code when you pressed a specific key
+```js
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
+
+(async () => {
+  if (await pressedKey('Enter')) {
+    console.log("Enter is pressed!");
+  }
+})();
+```
+
 # Create a simple canvas and load a file.js
 ```html
 <!DOCTYPE html>
