@@ -51,11 +51,24 @@ import Golfio from './node_modules/golfio/golfio.js';
 const canvas = document.getElementById('game')
 const golfio = new Golfio(canvas);
 
-(async () => {
-  if (await pressedKey('Enter')) {
-    console.log("Enter is pressed!");
+golfio.pressedKey('Enter').then((isPressed) => {
+  if (isPressed) {
+    console.log("Enter is pressed !");
   }
-})();
+});
+```
+
+# Create a button and execute a code when you clicked on it
+```js
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
+
+golfio.addButton(width, height, top, left, backgroundColor, borderRadius).then((isClicked) => {
+  if (isClicked) {
+    console.log("the button is clicked !");
+  }
+});
 ```
 
 # Create a simple canvas and load a file.js
@@ -72,6 +85,7 @@ const golfio = new Golfio(canvas);
 </head>
 
 <body>
+  <div id="container"></div>
   <canvas id="game" width="930" height="930"></canvas>
   <script type="module" src="/file.js"></script>
 </body>
