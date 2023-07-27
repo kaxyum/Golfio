@@ -1,3 +1,9 @@
+import Addtext from "./src/Text/AddText.js";
+import Removetext from "./src/Text/RemoveText.js";
+import Generateletter from "./src/Text/GenerateLetter";
+import Generatenumber from "./src/Text/GenerateNumber";
+import Addsprite from "./src/Sprite/AddSprite";
+import Removesprite from "./src/Sprite/RemoveSprite";
 let textArray = [];
 class Golfio {
   constructor(canvas) {
@@ -6,83 +12,34 @@ class Golfio {
     this.sprites = [];
   }
 
-  addButton(width, height, top, left, backgroundColor, borderRadius) {
-    return new Promise((resolve) => {
-      const button = document.createElement('button');
-      button.style.width = width;
-      button.style.height = height;
-      button.style.top = top;
-      button.style.left = left;
-      button.style.backgroundColor = backgroundColor;
-      button.style.borderRadius = borderRadius;
-
-      button.addEventListener('click', () => {
-        resolve(true);
-      });
-
-      const container = document.getElementById('container');
-      container.appendChild(button);
-    });
-  }
-
-  pressedKey(key, callback) {
-    document.addEventListener('keydown', (event) => {
-      if (event.key === key) {
-        callback(true);
-      }
-    });
-  }
-
   generateNumber(number) {
-    const min = Math.pow(10, number - 1);
-    const max = Math.pow(10, number) - 1;
-
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    const GenerateNumber = new Generatenumber();
+    return GenerateNumber.generateNumber(number);
   }
 
   generateLetter(letter) {
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let word = '';
-    for (let i = 0; i < letter; i++) {
-      const randomIndex = Math.floor(Math.random() * letters.length);
-      word += letters.charAt(randomIndex);
-  }
-
-    return word;
+    const GenerateLetter = new Generateletter();
+    return GenerateLetter.generateLetter(letter);
   }
 
   addText(left, top, fontfamily, fontsize, text) {
-    const textContainer = document.createElement('div');
-    textContainer.style.position = 'absolute';
-    textContainer.style.fontFamily = fontfamily;
-    textContainer.style.left = left;
-    textContainer.style.top = top;
-    textContainer.style.fontSize = fontsize;
-    textContainer.id = textArray.length;
-    textArray.push(textContainer);
-    document.body.appendChild(textContainer);
-
-    textContainer.innerHTML = text;
+    const AddText = new Addtext();
+    AddText.addText(left, top, fontfamily, fontsize, text);
   }
 
   removeText(text) {
-    for (let i = 0; i < textArray.length; i++) {
-      if (textArray[i].innerHTML === text) {
-        document.body.removeChild(textArray[i]);
-        textArray.splice(i, 1);
-      }
-    }
+    const RemoveText = new Removetext();
+    RemoveText.removeText(text);
   }
 
   addSprite(sprite) {
-    this.sprites.push(sprite);
+    const AddSprite = new Addsprite();
+    AddSprite.addSprite(sprite, this.sprites);
   }
 
   removeSprite(sprite) {
-    const index = this.sprites.indexOf(sprite);
-    if (index !== -1) {
-      this.sprites.splice(index, 1);
-    }
+    const RemoveSprite = new Removesprite();
+    RemoveSprite.removeSprite(sprite, this.sprites);
   }
 
   update(dt) {
@@ -105,9 +62,7 @@ class Golfio {
       this.update(dt);
       this.render();
       lastTime = currentTime;
-      requestAnimationFrame(loop);
     };
-    requestAnimationFrame(loop);
   }
 }
 
