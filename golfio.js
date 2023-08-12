@@ -1,10 +1,10 @@
 import Addtext from "./src/Text/AddText.js";
 import Removetext from "./src/Text/RemoveText.js";
-import Generateletter from "./src/Text/GenerateLetter";
-import Generatenumber from "./src/Text/GenerateNumber";
-import Addsprite from "./src/Sprite/AddSprite";
-import Removesprite from "./src/Sprite/RemoveSprite";
-import Playsound from "./src/Sound/PlaySound";
+import Generateletter from "./src/Text/GenerateLetter.js";
+import Generatenumber from "./src/Text/GenerateNumber.js";
+import Addsprite from "./src/Sprite/AddSprite.js";
+import Removesprite from "./src/Sprite/RemoveSprite.js";
+import Playsound from "./src/Sound/PlaySound.js";
 let textArray = [];
 class Golfio {
   constructor(canvas) {
