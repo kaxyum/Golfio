@@ -1,15 +1,10 @@
 # Golfio
 Simple GameEngine written in NodeJS by KaxYum
 
-# Install Golfio
-```
-npm i golfio
-```
-
 # Start the engine
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
-const canvas = document.getElementById('game')
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
 const golfio = new Golfio(canvas);
 
 golfio.start();
@@ -17,8 +12,8 @@ golfio.start();
 
 # Add and Remove a Sprite
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
-const canvas = document.getElementById('game')
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
 const golfio = new Golfio(canvas);
 
 golfio.addSprite(sprite);
@@ -27,8 +22,8 @@ golfio.removeSprite(sprite);
 
 # Add and Remove a Text
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
-const canvas = document.getElementById('game')
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
 const golfio = new Golfio(canvas);
 
 golfio.addText(left, top, fontfamily, fontsize, text);
@@ -37,8 +32,8 @@ golfio.removeText(text);
 
 # Generate a Numbers or a Letters
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
-const canvas = document.getElementById('game')
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
 const golfio = new Golfio(canvas);
 
 golfio.generateNumber(number);
@@ -47,8 +42,8 @@ golfio.generateLetter(letter);
 
 # Play a Sound
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
-const canvas = document.getElementById('game')
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
 const golfio = new Golfio(canvas);
 
 golfio.playSound(path, loop);
@@ -69,7 +64,7 @@ golfio.playSound(path, loop);
 
 <body>
   <canvas id="game" width="930" height="930"></canvas>
-  <script type="module" src="/file.js"></script>
+  <script type="module" src="./file.js"></script>
 </body>
 
 </html>
