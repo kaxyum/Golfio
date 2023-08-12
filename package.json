@@ -1,6 +1,6 @@
 {
   "name": "golfio",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "golfio.js",
   "description": "Simple GameEngine written in NodeJS by KaxYum",
   "scripts": {

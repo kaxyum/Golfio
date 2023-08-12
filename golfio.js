@@ -4,12 +4,18 @@ import Generateletter from "./src/Text/GenerateLetter";
 import Generatenumber from "./src/Text/GenerateNumber";
 import Addsprite from "./src/Sprite/AddSprite";
 import Removesprite from "./src/Sprite/RemoveSprite";
+import Playsound from "./src/Sound/PlaySound";
 let textArray = [];
 class Golfio {
   constructor(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.sprites = [];
+  }
+  
+  playSound(path,loop) {
+    const PlaySound = new Playsound();
+    return PlaySound.playSound(path, loop);
   }
 
   generateNumber(number) {

@@ -45,6 +45,15 @@ golfio.generateNumber(number);
 golfio.generateLetter(letter);
 ```
 
+# Play a Sound
+```js
+import Golfio from './node_modules/golfio/golfio.js';
+const canvas = document.getElementById('game')
+const golfio = new Golfio(canvas);
+
+golfio.playSound(path, loop);
+```
+
 # Create a simple canvas and load a file.js
 ```html
 <!DOCTYPE html>
