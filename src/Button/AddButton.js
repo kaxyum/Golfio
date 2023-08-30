@@ -9,7 +9,7 @@ class AddButton {
             button.style.left = left;
             button.style.backgroundColor = backgroundColor;
             button.style.borderRadius = borderRadius;
-            button.style.borderColor = borderColor;
+            button.style.border = borderColor;
 
             button.addEventListener('click', () => {
                 resolve(true);

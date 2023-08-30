@@ -20,9 +20,9 @@ class Golfio {
     return PressedKey.pressedKey(key, callback);
   }
   
-  addButton(width, height, top, left, backgroundColor, borderRadius) {
+  addButton(width, height, top, left, backgroundColor, borderRadius, borderColor) {
     const AddButton = new Addbutton();
-    return AddButton.addButton(width, height, top, left, backgroundColor, borderRadius);
+    return AddButton.addButton(width, height, top, left, backgroundColor, borderRadius, borderColor);
   }
   
   playSound(path,loop) {
