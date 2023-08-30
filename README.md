@@ -88,6 +88,7 @@ golfio.pressedKey('Enter').then((isPressed) => {
 </head>
 
 <body>
+  <div id="container"></div>
   <canvas id="game" width="930" height="930"></canvas>
   <script type="module" src="./file.js"></script>
 </body>
