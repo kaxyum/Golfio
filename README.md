@@ -45,7 +45,7 @@ import Golfio from './Golfio/golfio.js';
 const canvas = document.getElementById('game')
 const golfio = new Golfio(canvas);
 
-golfio.addButton(width, height, top, left, backgroundColor, borderRadius).then((isClicked) => {
+golfio.addButton(width, height, top, left, backgroundColor, borderRadius, borderColor).then((isClicked) => {
   if (isClicked) {
     console.log("the button is clicked !");
   }
