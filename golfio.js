@@ -6,7 +6,7 @@ import Addsprite from "./src/Sprite/AddSprite.js";
 import Removesprite from "./src/Sprite/RemoveSprite.js";
 import Playsound from "./src/Sound/PlaySound.js";
 import Addbutton from "./src/Button/AddButton.js";
-import Pressedkey from "./src/Key/PressedKey";
+import Pressedkey from "./src/Key/PressedKey.js";
 let textArray = [];
 class Golfio {
   constructor(canvas) {
