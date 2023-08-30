@@ -51,7 +51,7 @@ golfio.playSound(path, loop);
 
 # Create a button and execute a code when you clicked on it
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
+import Golfio from './Golfio/golfio.js';
 const canvas = document.getElementById('game')
 const golfio = new Golfio(canvas);
 
@@ -63,7 +63,7 @@ golfio.addButton(width, height, top, left, backgroundColor, borderRadius).then((
 ```
 # Execute code when you pressed a specific key
 ```js
-import Golfio from './node_modules/golfio/golfio.js';
+import Golfio from './Golfio/golfio.js';
 const canvas = document.getElementById('game')
 const golfio = new Golfio(canvas);
 
