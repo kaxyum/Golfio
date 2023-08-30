@@ -50,14 +50,14 @@ class Golfio {
     RemoveText.removeText(text);
   }
 
-  addSprite(sprite) {
+  addSprite(sprite, sprites) {
     const AddSprite = new Addsprite();
-    AddSprite.addSprite(sprite, this.sprites);
+    AddSprite.addSprite(sprite, sprites);
   }
 
-  removeSprite(sprite) {
+  removeSprite(sprite, sprites) {
     const RemoveSprite = new Removesprite();
-    RemoveSprite.removeSprite(sprite, this.sprites);
+    RemoveSprite.removeSprite(sprite, sprites);
   }
 
   update(dt) {

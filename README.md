@@ -10,16 +10,6 @@ const golfio = new Golfio(canvas);
 golfio.start();
 ```
 
-# Add and Remove a Sprite
-```js
-import Golfio from './Golfio/golfio.js';
-const canvas = document.getElementById('game');
-const golfio = new Golfio(canvas);
-
-golfio.addSprite(sprite);
-golfio.removeSprite(sprite);
-```
-
 # Add and Remove a Text
 ```js
 import Golfio from './Golfio/golfio.js';
@@ -74,12 +64,56 @@ golfio.pressedKey('Enter').then((isPressed) => {
 });
 ```
 
+# Add and Remove a Sprite
+```js
+import Golfio from './Golfio/golfio.js';
+const canvas = document.getElementById('game');
+const golfio = new Golfio(canvas);
+
+const sprite = new Sprite(300, 300, 20);
+sprite.body.push({ x: sprite.x, y: sprite.y });
+golfio.addSprite(sprite, golfio.sprites);
+golfio.removeSprite(sprite, golfio.sprites);
+golfio.render();
+```
+
+# Create a Sprite
+```js
+class Sprite {
+  constructor(x, y, size) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.body = [];
+    this.image = new Image();
+    this.image.src = './sprite.png';
+  }
+
+  update(dt) {
+    this.body.unshift({ x: this.x, y: this.y });
+    this.body.pop();
+  }
+
+  render(ctx) {
+    this.image.onload = () => {
+      for (const segment of this.body) {
+        ctx.drawImage(this.image, segment.x, segment.y, this.size, this.size);
+      }
+    };
+  }
+}
+
+export default Sprite;
+```
+
 # Create a simple canvas and load a file.js
 ```html
 <!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     #game {
       border: 1px solid black;
