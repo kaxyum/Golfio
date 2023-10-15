@@ -5,24 +5,12 @@ import Generatenumber from "./src/Text/GenerateNumber.js";
 import Addsprite from "./src/Sprite/AddSprite.js";
 import Removesprite from "./src/Sprite/RemoveSprite.js";
 import Playsound from "./src/Sound/PlaySound.js";
-import Addbutton from "./src/Button/AddButton.js";
-import Pressedkey from "./src/Key/PressedKey.js";
 let textArray = [];
 class Golfio {
   constructor(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.sprites = [];
-  }
-  
-  pressedKey(key, callback) {
-    const PressedKey = new Pressedkey();
-    return PressedKey.pressedKey(key, callback);
-  }
-  
-  addButton(width, height, top, left, backgroundColor, borderRadius, borderColor) {
-    const AddButton = new Addbutton();
-    return AddButton.addButton(width, height, top, left, backgroundColor, borderRadius, borderColor);
   }
   
   playSound(path,loop) {
@@ -50,14 +38,14 @@ class Golfio {
     RemoveText.removeText(text);
   }
 
-  addSprite(sprite, sprites) {
+  addSprite(sprite) {
     const AddSprite = new Addsprite();
-    AddSprite.addSprite(sprite, sprites);
+    AddSprite.addSprite(sprite, this.sprites);
   }
 
-  removeSprite(sprite, sprites) {
+  removeSprite(sprite) {
     const RemoveSprite = new Removesprite();
-    RemoveSprite.removeSprite(sprite, sprites);
+    RemoveSprite.removeSprite(sprite, this.sprites);
   }
 
   update(dt) {
